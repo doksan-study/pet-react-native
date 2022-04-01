@@ -13,6 +13,10 @@ import com.app.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
+// TODO: vector-icons 추가
+// import com.oblador.vectoricons.VectorIconsPackage;
+
+
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
