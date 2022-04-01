@@ -13,7 +13,22 @@ function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="login" component={login} />
+        <Stack.Screen
+          name="login"
+          component={login}
+          options={{
+            title: 'login',
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="register"
+          component={register}
+          // options={{
+          //   title: 'register',
+          //   headerShown: false,
+          // }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
