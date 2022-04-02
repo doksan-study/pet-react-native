@@ -99,6 +99,7 @@ export default function login({navigation}) {
           color: '#FF995E',
           fontFamily: 'SemiBold',
           paddingVertical: 30,
+          // marginBottom: 50,
         }}
         onPress={() => navigation.navigate('register')}>
         New User

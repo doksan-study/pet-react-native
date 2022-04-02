@@ -24,10 +24,10 @@ function AppNavigator() {
         <Stack.Screen
           name="register"
           component={register}
-          // options={{
-          //   title: 'register',
-          //   headerShown: false,
-          // }}
+          options={{
+            title: 'register',
+            headerShown: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
