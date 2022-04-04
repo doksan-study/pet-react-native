@@ -99,8 +99,9 @@ export default function Login({navigation}) {
           color: '#FF995E',
           fontFamily: 'SemiBold',
           paddingVertical: 30,
+          marginBottom: 30,
         }}
-        onPress={() => navigation.navigate('register')}>
+        onPress={() => navigation.navigate('Register')}>
         New User
       </Text>
     </View>
