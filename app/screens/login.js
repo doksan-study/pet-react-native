@@ -4,7 +4,7 @@ import React from 'react';
 
 import AntIcon from 'react-native-vector-icons/AntDesign';
 
-export default function login({navigation}) {
+export default function Login({navigation}) {
   return (
     <View style={{backgroundColor: '#fff', height: '100%'}}>
       <Image
