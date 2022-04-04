@@ -3,6 +3,7 @@ import {View, Text, Image, TextInput} from 'react-native';
 import React from 'react';
 
 import AntIcon from 'react-native-vector-icons/AntDesign';
+import MainNavigator from '../navigations/MainNavigator';
 
 export default function Login({navigation}) {
   return (
@@ -88,7 +89,8 @@ export default function Login({navigation}) {
           style={{
             color: 'white',
             fontFamily: 'SemiBold',
-          }}>
+          }}
+          onPress={() => navigation.navigate(MainNavigator)}>
           Login
         </Text>
       </View>
