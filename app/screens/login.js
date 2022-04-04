@@ -17,7 +17,7 @@ export default function login({navigation}) {
           // fontFamily: ''
           alignSelf: 'center',
         }}>
-        APP NAME
+        Catch My Pet
       </Text>
       <Text
         style={{
