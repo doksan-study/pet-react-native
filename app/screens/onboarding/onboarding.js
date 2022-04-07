@@ -30,7 +30,7 @@ export default function Onboarding({navigation}) {
 
   const renderItem = ({item}) => {
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: '#fff'}}>
         <Image
           source={item.image}
           style={{

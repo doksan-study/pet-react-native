@@ -6,7 +6,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-import Main from '../screens/Main/main';
+import Main from '../screens/main/main';
 import Map from '../screens/main/map';
 
 export default function MainNavigator() {
