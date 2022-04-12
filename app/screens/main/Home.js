@@ -2,13 +2,13 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
 
-export default function Main() {
+const Home = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Main</Text>
+      <Text style={styles.title}>Home</Text>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -21,3 +21,5 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
 });
+
+export default Home;

@@ -10,10 +10,15 @@ import Register from '../screens/register';
 
 const Stack = createNativeStackNavigator();
 
-function AuthNavigator() {
+const AuthNavigator = () => {
   return (
     // <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator
+    // options={{
+    //   title: 'Onboarding',
+    //   headerShown: false,
+    // }}
+    >
       <Stack.Screen
         name="Onboarding"
         component={Onboarding}
@@ -41,6 +46,6 @@ function AuthNavigator() {
     </Stack.Navigator>
     // </NavigationContainer>
   );
-}
+};
 
 export default AuthNavigator;
