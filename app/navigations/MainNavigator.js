@@ -2,34 +2,20 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-const Stack = createNativeStackNavigator();
-
-import Main from '../screens/main/main';
+import Home from '../screens/main/Home';
 import Map from '../screens/main/map';
 
-export default function MainNavigator() {
+const Tab = createBottomTabNavigator();
+
+const MainNavigator = () => {
   return (
-    // <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Main"
-        component={Main}
-        options={{
-          title: 'Main',
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Map"
-        component={Map}
-        options={{
-          title: 'Map',
-          headerShown: false,
-        }}
-      />
-    </Stack.Navigator>
-    // </NavigationContainer>
+    <Tab.Navigator>
+      <Tab.Screen name="Home" component={Home}></Tab.Screen>
+      <Tab.Screen name="Map" component={Map}></Tab.Screen>
+    </Tab.Navigator>
   );
-}
+};
+
+export default MainNavigator;

@@ -3,39 +3,21 @@ import {View, StyleSheet} from 'react-native';
 import React, {useState} from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import AuthNavigator from './navigations/AuthNavigator';
-import MainNavigator from './navigations/MainNavigator';
-
-const Stack = createNativeStackNavigator();
+// import AuthNavigator from './navigations/AuthNavigator';
+// import MainNavigator from './navigations/MainNavigator';
+// import DrawerNavigator from './navigations/DrawerNavigator';
+import NestingNavigator from './navigations/NestingNavigator';
 
 export default function App() {
-  // const [state, setState] = useState();
-
   return (
     <>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="AuthNavigator"
-            component={AuthNavigator}
-            options={{
-              title: 'Auth',
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="MainNavigator"
-            component={MainNavigator}
-            options={{
-              title: 'Auth',
-              headerShown: false,
-            }}
-          />
-        </Stack.Navigator>
+        {/* <AuthNavigator /> */}
+        {/* <MainNavigator /> */}
+        {/* <DrawerNavigator /> */}
+        <NestingNavigator />
       </NavigationContainer>
-      {/* <AuthNavigator /> */}
     </>
   );
 }

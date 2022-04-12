@@ -1,5 +1,5 @@
 /* eslint-disable */
-import * as React from 'react';
+import React from 'react';
 import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -10,37 +10,19 @@ import Register from '../screens/register';
 
 const Stack = createNativeStackNavigator();
 
-function AuthNavigator() {
+const AuthNavigator = () => {
   return (
     // <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Onboarding"
-        component={Onboarding}
-        options={{
-          title: 'Onboarding',
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Login"
-        component={Login}
-        options={{
-          title: 'Login',
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Register"
-        component={Register}
-        options={{
-          title: 'Register',
-          headerShown: false,
-        }}
-      />
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Stack.Screen name="Onboarding" component={Onboarding} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Register" component={Register} />
     </Stack.Navigator>
     // </NavigationContainer>
   );
-}
+};
 
 export default AuthNavigator;
