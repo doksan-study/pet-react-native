@@ -1,26 +1,14 @@
 /* eslint-disable */
-import {View, StyleSheet} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import MainStackNavigator from './navigations/StackNavigator'
 
-import {NavigationContainer} from '@react-navigation/native';
-
-import NestingNavigator from './navigations/NestingNavigator';
-
-export default function App() {
+const App = () => {
   return (
-    <>
-      <NavigationContainer>
-        <NestingNavigator />
-      </NavigationContainer>
-    </>
-  );
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
