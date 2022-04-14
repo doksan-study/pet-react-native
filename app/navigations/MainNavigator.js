@@ -15,10 +15,9 @@ const MainNavigator = () => {
       <Tab.Screen
         name="Home"
         component={Home}
-        // options={{
-        //   title: 'Main',
-        //   headerShown: false,
-        // }}
+        options={{
+          headerShown: false,
+        }}
       />
       <Tab.Screen
         name="Map"

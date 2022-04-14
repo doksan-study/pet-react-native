@@ -1,3 +1,4 @@
+/* eslint-disable */
 import {View, Text} from 'react-native';
 import React from 'react';
 
@@ -11,10 +12,9 @@ const Stack = createNativeStackNavigator();
 const NestingNavigator = () => {
   return (
     <Stack.Navigator
-    // options={{
-    //   headerShown: false,
-    // }}
-    >
+      options={{
+        headerShown: false,
+      }}>
       <Stack.Screen
         name="Auth"
         component={AuthNavigator}
@@ -22,7 +22,13 @@ const NestingNavigator = () => {
           headerShown: false,
         }}
       />
-      <Stack.Screen name="MainNavigator" component={MainNavigator} />
+      <Stack.Screen
+        name="MainNavigator"
+        component={MainNavigator}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack.Navigator>
   );
 };
