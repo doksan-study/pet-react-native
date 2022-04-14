@@ -18,7 +18,7 @@ const Home = () => {
           paddingHorizontal: 20,
         }}>
         {/* FIXME: 아이콘을 놓을 위치 */}
-        <Text>Drawer을 놓을 위치(아이콘)</Text>
+        {/* <Text>Drawer을 놓을 위치(아이콘)</Text> */}
 
         <View
           style={{
