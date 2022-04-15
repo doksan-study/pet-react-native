@@ -2,6 +2,9 @@
 import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 
+import LinearGradient from 'react-native-linear-gradient';
+
+
 const Home = () => {
   return (
     <View
@@ -46,8 +49,14 @@ const Home = () => {
           </View>
         </View>
       </View>
+
+      <LinearGradient>
+
+      </LinearGradient>
     </View>
   );
 };
+
+
 
 export default Home;
