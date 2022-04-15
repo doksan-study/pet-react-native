@@ -11,24 +11,9 @@ const Stack = createNativeStackNavigator();
 
 const NestingNavigator = () => {
   return (
-    <Stack.Navigator
-      options={{
-        headerShown: false,
-      }}>
-      <Stack.Screen
-        name="Auth"
-        component={AuthNavigator}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="MainNavigator"
-        component={MainNavigator}
-        options={{
-          headerShown: false,
-        }}
-      />
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Auth" component={AuthNavigator} />
+      <Stack.Screen name="MainNavigator" component={MainNavigator} />
     </Stack.Navigator>
   );
 };

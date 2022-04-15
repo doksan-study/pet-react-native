@@ -12,39 +12,11 @@ const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
   return (
-    // <NavigationContainer>
-    <Stack.Navigator
-    // options={{
-    //   title: 'Onboarding',
-    //   headerShown: false,
-    // }}
-    >
-      <Stack.Screen
-        name="Onboarding"
-        component={Onboarding}
-        options={{
-          title: 'Onboarding',
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Login"
-        component={Login}
-        options={{
-          title: 'Login',
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Register"
-        component={Register}
-        options={{
-          title: 'Register',
-          headerShown: false,
-        }}
-      />
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Onboarding" component={Onboarding} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Register" component={Register} />
     </Stack.Navigator>
-    // </NavigationContainer>
   );
 };
 

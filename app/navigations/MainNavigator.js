@@ -11,22 +11,9 @@ const Tab = createBottomTabNavigator();
 
 const MainNavigator = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Home"
-        component={Home}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Tab.Screen
-        name="Map"
-        component={Map}
-        // options={{
-        //   title: 'Map',
-        //   headerShown: false,
-        // }}
-      />
+    <Tab.Navigator screenOptions={{headerShown: false}}>
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Map" component={Map} />
     </Tab.Navigator>
   );
 };
