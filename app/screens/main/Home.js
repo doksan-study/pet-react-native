@@ -46,10 +46,10 @@ const Home = ({navigation}) => {
           </View>
         </LinearGradient>
 
-        {/* TODO: Category */}
+        {/* TODO: Category1 - 유기견 공고 */}
         <View style={styles.categoryView}>
           <View style={{width: '50%'}}>
-            <Text style={styles.categoryMainTitle}>Recommended</Text>
+            <Text style={styles.categoryMainTitle}>유기견 공고</Text>
             <View style={styles.categoryMainTitleUnderBar}></View>
           </View>
 
@@ -76,7 +76,6 @@ const Home = ({navigation}) => {
               top: 0,
             }}
           />
-
           {/* TODO: Card */}
           <TouchableOpacity
             onPress={() => navigation.navigate('Detail')}
@@ -103,12 +102,61 @@ const Home = ({navigation}) => {
           </TouchableOpacity>
         </ScrollView>
 
-        {/* <Text>나와나와나와</Text> */}
+        {/* TODO: Category2 - 주변 보호소 */}
         <View style={styles.categoryView}>
           <View style={{width: '50%'}}>
-            <Text style={styles.categoryMainTitle}>Feature</Text>
+            <Text style={styles.categoryMainTitle}>주변 보호소</Text>
+            <Text style={styles.categoryMainTitleUnderBar}>Feature</Text>
+          </View>
+
+          <View style={{width: '50%', alignItems: 'flex-end'}}>
+            <View style={styles.categoryButton}>
+              <Text style={styles.categoryButtonText}>More</Text>
+            </View>
           </View>
         </View>
+
+        {/* TODO: SCROLLVIEW */}
+        <ScrollView
+          horizontal
+          showsVerticalScrollIndicator={false}
+          style={{height: 400}}>
+          <LinearGradient
+            colors={['rgba(0,164,109,0)', 'transparent']}
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              height: 100,
+              marginTop: 220,
+              top: 0,
+            }}
+          />
+          {/* TODO: Card */}
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Detail')}
+            style={styles.card}>
+            <Text
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}>
+              이미지 넣을 자리
+            </Text>
+
+            <View style={styles.cardTitle}>
+              <Text
+                style={{
+                  fontWeight: 'bold',
+                }}>
+                제목
+              </Text>
+              <Text style={styles.cardDetail1}>디테일</Text>
+            </View>
+            <Text style={styles.cardDetail2}>디테일2</Text>
+          </TouchableOpacity>
+        </ScrollView>
       </View>
     </ScrollView>
   );
@@ -120,7 +168,7 @@ const styles = StyleSheet.create({
   // TODO: Header
   header: {
     backgroundColor: '#FF995E',
-    height: '28%',
+    height: '15%',
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     paddingHorizontal: 20,
@@ -166,7 +214,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     width: '100%',
     alignItems: 'center',
-    marginTop: 10,
+    marginTop: 20,
   },
   categoryMainTitle: {
     fontWeight: 'bold',
@@ -176,8 +224,8 @@ const styles = StyleSheet.create({
   categoryMainTitleUnderBar: {
     height: 4,
     backgroundColor: '#FDDBC8',
-    width: 115,
-    marginTop: -5,
+    width: 100,
+    marginTop: -1,
   },
   categoryButton: {
     backgroundColor: '#FF995E',
