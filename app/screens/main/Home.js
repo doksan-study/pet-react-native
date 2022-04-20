@@ -11,6 +11,8 @@ import {
 import React from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
+import AntIcon from 'react-native-vector-icons/AntDesign';
+
 const Home = ({navigation}) => {
   return (
     <ScrollView>
@@ -20,19 +22,31 @@ const Home = ({navigation}) => {
           flex: 1,
         }}>
         <View style={styles.header}>
-          {/* <Text>리스트</Text> */}
-
           <View style={styles.headerRow}>
             <View style={{width: '50%'}}>
               <Text style={styles.headerMainTitle}>Welcome~!</Text>
             </View>
 
-            <View style={{width: '50%', alignItems: 'center'}}>
-              <Text>로고 넣을 자리</Text>
+            <View
+              style={{
+                width: '50%',
+                alignItems: 'center',
+                alignItems: 'flex-end',
+              }}>
+              {/* <Text>로고 넣을 자리</Text> */}
+              <Image
+                source={require('../../image/Home/pet.png')}
+                style={{
+                  height: 60,
+                  width: 60,
+                  borderRadius: 20,
+                }}
+              />
             </View>
           </View>
         </View>
 
+        {/* TODO: Search */}
         <LinearGradient
           colors={['rgba(255, 153, 94,0.4)', 'transparent']}
           style={styles.searchLinear}>
@@ -42,12 +56,18 @@ const Home = ({navigation}) => {
               placeholderTextColor="#FDDBC8"
               style={styles.searchBarText}
             />
-            <Text>검색 아이콘</Text>
+            {/* TODO: 검색 아이콘 */}
+            <AntIcon
+              style={{paddingLeft: 20}}
+              name="search1"
+              color="#FF995E"
+              size={24}
+            />
           </View>
         </LinearGradient>
 
         {/* TODO: Category1 - 유기견 공고 */}
-        <View style={styles.categoryView}>
+        <View style={styles.categoryView1}>
           <View style={{width: '50%'}}>
             <Text style={styles.categoryMainTitle}>유기견 공고</Text>
             <View style={styles.categoryMainTitleUnderBar}></View>
@@ -60,11 +80,14 @@ const Home = ({navigation}) => {
           </View>
         </View>
 
-        {/* TODO: SCROLLVIEW */}
+        {/* TODO: SCROLLVIEW - 유기견 공고 */}
         <ScrollView
           horizontal
           showsVerticalScrollIndicator={false}
-          style={{height: 400}}>
+          style={{
+            height: 400,
+            // paddingHorizontal: 5
+          }}>
           <LinearGradient
             colors={['rgba(0,164,109,0)', 'transparent']}
             style={{
@@ -76,26 +99,22 @@ const Home = ({navigation}) => {
               top: 0,
             }}
           />
+
           {/* TODO: Card */}
           <TouchableOpacity
             onPress={() => navigation.navigate('Detail')}
             style={styles.card}>
-            <Text
+            <Image
+              source={require('../../image/Home/pet.png')}
               style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              이미지 넣을 자리
-            </Text>
+                // borderColor: 'grey',
+                // borderWidth: 4,
+                width: '100%',
+              }}
+            />
 
             <View style={styles.cardTitle}>
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                }}>
-                제목
-              </Text>
+              <Text style={{fontWeight: 'bold'}}>제목</Text>
               <Text style={styles.cardDetail1}>디테일</Text>
             </View>
             <Text style={styles.cardDetail2}>디테일2</Text>
@@ -103,7 +122,7 @@ const Home = ({navigation}) => {
         </ScrollView>
 
         {/* TODO: Category2 - 주변 보호소 */}
-        <View style={styles.categoryView}>
+        <View style={styles.categoryView2}>
           <View style={{width: '50%'}}>
             <Text style={styles.categoryMainTitle}>주변 보호소</Text>
             <Text style={styles.categoryMainTitleUnderBar}>Feature</Text>
@@ -116,7 +135,7 @@ const Home = ({navigation}) => {
           </View>
         </View>
 
-        {/* TODO: SCROLLVIEW */}
+        {/* TODO: SCROLLVIEW - 주변 보호소 */}
         <ScrollView
           horizontal
           showsVerticalScrollIndicator={false}
@@ -136,22 +155,17 @@ const Home = ({navigation}) => {
           <TouchableOpacity
             onPress={() => navigation.navigate('Detail')}
             style={styles.card}>
-            <Text
+            <Image
+              source={require('../../image/Home/pet.png')}
               style={{
-                flex: 1,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              이미지 넣을 자리
-            </Text>
+                // borderColor: 'grey',
+                // borderWidth: 4,
+                width: '100%',
+              }}
+            />
 
             <View style={styles.cardTitle}>
-              <Text
-                style={{
-                  fontWeight: 'bold',
-                }}>
-                제목
-              </Text>
+              <Text style={{fontWeight: 'bold'}}>제목</Text>
               <Text style={styles.cardDetail1}>디테일</Text>
             </View>
             <Text style={styles.cardDetail2}>디테일2</Text>
@@ -201,20 +215,32 @@ const styles = StyleSheet.create({
     marginTop: 25,
     flexDirection: 'row',
     alignItems: 'center',
+    borderWidth: 3,
+    borderColor: '#FDDBC8',
   },
   searchBarText: {
     fontWeight: 'bold',
     fontSize: 18,
     width: 260,
+
+    // borderWidth: 2,
+    // borderColor: 'grey',
   },
 
   // TODO: CATEGORY
-  categoryView: {
+  categoryView1: {
     flexDirection: 'row',
     paddingHorizontal: 20,
     width: '100%',
     alignItems: 'center',
     marginTop: 20,
+  },
+  categoryView2: {
+    flexDirection: 'row',
+    paddingHorizontal: 20,
+    width: '100%',
+    alignItems: 'center',
+    // marginTop: 10,
   },
   categoryMainTitle: {
     fontWeight: 'bold',
@@ -261,11 +287,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#00a46c',
     paddingLeft: 35,
+    // flex: 1,
+    // alignItems: 'flex-end',
+    // borderColor: 'grey',
+    // borderWidth: 3,
   },
   cardDetail2: {
     paddingHorizontal: 10,
     fontWeight: 'bold',
     color: '#b1e5d3',
-    paddingTop: 3,
+    paddingTop: 6,
   },
 });

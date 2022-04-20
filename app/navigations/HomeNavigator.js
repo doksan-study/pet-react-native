@@ -9,7 +9,7 @@ import Map from '../screens/main/map';
 
 const Tab = createBottomTabNavigator();
 
-const MainNavigator = () => {
+const HomeNavigator = () => {
   return (
     <Tab.Navigator screenOptions={{headerShown: false}}>
       <Tab.Screen name="Home" component={Home} />
@@ -18,4 +18,4 @@ const MainNavigator = () => {
   );
 };
 
-export default MainNavigator;
+export default HomeNavigator;
