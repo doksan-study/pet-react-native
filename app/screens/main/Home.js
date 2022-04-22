@@ -83,10 +83,11 @@ const Home = ({navigation}) => {
         {/* TODO: SCROLLVIEW - 유기견 공고 */}
         <ScrollView
           horizontal
-          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
           style={{
-            height: 400,
-            // paddingHorizontal: 5
+            height: 380,
+            // borderColor: 'grey',
+            // borderWidth: 2,
           }}>
           <LinearGradient
             colors={['rgba(0,164,109,0)', 'transparent']}
@@ -107,12 +108,9 @@ const Home = ({navigation}) => {
             <Image
               source={require('../../image/Home/pet.png')}
               style={{
-                // borderColor: 'grey',
-                // borderWidth: 4,
                 width: '100%',
               }}
             />
-
             <View style={styles.cardTitle}>
               <Text style={{fontWeight: 'bold'}}>제목</Text>
               <Text style={styles.cardDetail1}>디테일</Text>
@@ -138,7 +136,7 @@ const Home = ({navigation}) => {
         {/* TODO: SCROLLVIEW - 주변 보호소 */}
         <ScrollView
           horizontal
-          showsVerticalScrollIndicator={false}
+          showsHorizontalScrollIndicator={false}
           style={{height: 400}}>
           <LinearGradient
             colors={['rgba(0,164,109,0)', 'transparent']}
@@ -158,8 +156,6 @@ const Home = ({navigation}) => {
             <Image
               source={require('../../image/Home/pet.png')}
               style={{
-                // borderColor: 'grey',
-                // borderWidth: 4,
                 width: '100%',
               }}
             />

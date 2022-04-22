@@ -5,15 +5,30 @@ import {View, Text} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '../screens/main/Home';
-import Map from '../screens/main/map';
+import Map from '../screens/main/Map';
+
+// TODO: Icon
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const Tab = createBottomTabNavigator();
 
 const HomeNavigator = () => {
   return (
     <Tab.Navigator screenOptions={{headerShown: false}}>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Map" component={Map} />
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarIcon: () => <Icon name="home" size={24} />,
+        }}
+      />
+      <Tab.Screen
+        name="Map"
+        component={Map}
+        options={{
+          tabBarIcon: () => <Icon name="map" size={24} />,
+        }}
+      />
     </Tab.Navigator>
   );
 };

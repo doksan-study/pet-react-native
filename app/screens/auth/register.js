@@ -8,7 +8,7 @@ export default function Register() {
   return (
     <View style={{backgroundColor: '#fff', height: '100%'}}>
       <Image
-        source={require('../image/default.jpg')}
+        source={require('../../image/default.jpg')}
         style={{width: '100%', height: '43%'}}
       />
       <Text style={styles.logoTitle}>APP NAME</Text>

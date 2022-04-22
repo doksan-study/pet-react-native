@@ -3,13 +3,13 @@ import {View, Text, Image, TextInput, StyleSheet} from 'react-native';
 import React from 'react';
 
 import AntIcon from 'react-native-vector-icons/AntDesign';
-import HomeNavigator from '../navigations/HomeNavigator';
+import HomeNavigator from '../../navigations/HomeNavigator';
 
 export default function Login({navigation}) {
   return (
     <View style={{backgroundColor: '#fff', height: '100%'}}>
       <Image
-        source={require('../image/default.jpg')}
+        source={require('../../image/default.jpg')}
         style={{width: '100%', height: '43%'}}
       />
       <Text style={styles.logoTitle}>Catch My Pet</Text>

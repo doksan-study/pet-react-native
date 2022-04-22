@@ -3,7 +3,7 @@
 <br>
 <br>
 
-![onboarding](https://user-images.githubusercontent.com/94351468/161486305-19c6a5d3-0393-4015-9aa2-1955e1fb0f6b.gif)
+![demo](https://user-images.githubusercontent.com/79133968/164586875-ba43585f-6ab6-4d79-93b6-1af41f5c2964.gif)
 
 <br>
 <br>
