@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import Home from '../screens/main/Home';
 import Map from '../screens/main/Map';
+import Call from '../screens/main/Call';
 
 // TODO: Icon
 import Icon from 'react-native-vector-icons/FontAwesome5';
@@ -20,6 +21,13 @@ const HomeNavigator = () => {
         component={Home}
         options={{
           tabBarIcon: () => <Icon name="home" size={24} />,
+        }}
+      />
+      <Tab.Screen
+        name="Call"
+        component={Call}
+        options={{
+          tabBarIcon: () => <Icon name="phone" size={24} />,
         }}
       />
       <Tab.Screen

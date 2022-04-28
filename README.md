@@ -37,7 +37,20 @@ https://callstack.github.io/react-native-paper/
 
 ### navigation
 
+---
+
 중복으로 사용하는 방법을 알아보자..
 
 현재, stack과 tab은 중복이 되었으나
 drawer를 추가하고 싶은데 잘 되지 않았다...
+
+<br>
+<br>
+
+### react-native-phone-call
+
+---
+
+> https://www.npmjs.com/package/react-native-phone-call
+
+> https://aboutreact.com/example-to-make-a-call-from-the-react-native-app/

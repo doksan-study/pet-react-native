@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 var data = [
   {
     id: 0,
