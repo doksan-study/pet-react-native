@@ -8,12 +8,17 @@ import {
   Image,
   StyleSheet,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 
 import AntIcon from 'react-native-vector-icons/AntDesign';
 
+// TODO: DummyData
+import Data from './dummyData/dummyData';
+
 const Home = ({navigation}) => {
+  const [petData, setPetData] = useState(Data);
+
   return (
     <ScrollView>
       <View
@@ -85,9 +90,7 @@ const Home = ({navigation}) => {
           horizontal
           showsHorizontalScrollIndicator={false}
           style={{
-            height: 380,
-            // borderColor: 'grey',
-            // borderWidth: 2,
+            height: 370,
           }}>
           <LinearGradient
             colors={['rgba(0,164,109,0)', 'transparent']}
@@ -102,21 +105,26 @@ const Home = ({navigation}) => {
           />
 
           {/* TODO: Card */}
-          <TouchableOpacity
-            onPress={() => navigation.navigate('Detail')}
-            style={styles.card}>
-            <Image
-              source={require('../../image/Home/pet.png')}
-              style={{
-                width: '100%',
-              }}
-            />
-            <View style={styles.cardTitle}>
-              <Text style={{fontWeight: 'bold'}}>제목</Text>
-              <Text style={styles.cardDetail1}>디테일</Text>
-            </View>
-            <Text style={styles.cardDetail2}>디테일2</Text>
-          </TouchableOpacity>
+          {petData?.map(pet => {
+            return (
+              <TouchableOpacity
+                onPress={() => navigation.navigate('Detail')}
+                style={styles.card}>
+                <Image
+                  source={{uri: pet.image}}
+                  style={{
+                    width: '100%',
+                    height: 170,
+                  }}
+                />
+                <View style={styles.cardTitle}>
+                  <Text style={{fontWeight: 'bold'}}>{pet.title}</Text>
+                  <Text style={styles.cardDetail1}>{pet.description}</Text>
+                </View>
+                <Text style={styles.cardDetail2}>{pet.detail}</Text>
+              </TouchableOpacity>
+            );
+          })}
         </ScrollView>
 
         {/* TODO: Category2 - 주변 보호소 */}
