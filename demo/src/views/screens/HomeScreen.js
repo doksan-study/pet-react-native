@@ -1,6 +1,7 @@
 import React from 'react';
 import {Dimensions, SafeAreaView, StyleSheet, Text} from 'react-native';
 import COLORS from '../../const/color';
+
 const {height} = Dimensions.get('window');
 
 const HomeScreen = ({navigation}) => {
